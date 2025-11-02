@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Main Page</title>
+            <link href="css/style.css" rel="stylesheet" type="text/css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+        </head>
+        <body>
+            <div class="topnav">
+                <div class="nav-left">
+                    <img src="./img/LogoP1.png" alt="Logo" class="logo" />
+                        <a href="index.html" class="active">Home</a> 
+                        <a href="aboutus.html">About Us</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="contact.html">Contact Us</a>
+                </div>
+<div class="nav-right">
+    <!-- Cart Icon -->
+    <a href="cart.html" class="icon-link">
+        <i class="fas fa-shopping-cart"></i>
+    </a>
+
+    <!-- User Icon -->
+    <a href="profile.html" class="icon-link">
+        <i class="fas fa-user"></i>
+    </a>
+
+    <!-- Log In Button -->
+    <a href="login.html">
+        <button class="nav-btn">Log In</button>
+    </a>
+
+    <!-- Sign Up Button -->
+    <a href="signup.html">
+        <button class="nav-btn signup">Sign Up</button>
+    </a>
+</div>
+
+            </div>
+            <!--Content SlideShow-->
+            <div class="content_slideshow">
+                <div>
+                    <div class="slideshow-container">
+                        <div class="mySlide fade" style="background-image: url('images/PromoteBanner1.png')">
+                            <!-- <div class="slide-text">
+                                <h1>Delicious Cakes for Every Occasion</h1>
+                                <p>Freshly made just for you.</p>
+                            </div> -->
+                        </div>
+
+                        <div class="mySlide fade" style="background-image: url('images/PromoteBanner2.png')">
+                            <!-- <div class="slide-text">
+                                <h1>Join Our Rewards Program</h1>
+                                <p>Enjoy exclusive perks and surprises!</p>
+                            </div> -->
+                        </div>
+
+                        <div class="mySlide fade" style="background-image: url('images/PromoteBanner3.png')">
+                            <!-- <div class="slide-text">
+                                <h1>Join Our Rewards Program</h1>
+                                <p>Enjoy exclusive perks and surprises!</p>
+                            </div> -->
+                        </div>
+                            
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+
+                        <div class="dots">
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                        </div>
+
+                        <section class="reveal-section">
+                            <!-- About Us: image beside text -->
+                                <div class="reveal-container layout-row">
+                                    <div class="reveal-text">
+                                        <div class="text-box">
+                                        <h1 class="about-title">About Us</h1>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </p>
+                                        </div>
+                                    </div>
+                                    <div class="reveal-image" style="background-image: url('images/Uitm2.jpg');"></div>
+                                </div>
+
+                                <!-- <div class="reveal-container layout-column">
+                                    <div class="text-box">
+                                        <h1 class="about-title">limited Edition</h1>
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p> 
+                                    </div>
+                                    <div class="menu-slider-container">
+                                        <button class="slide-arrow left" onclick="scrollMenu(-1)">&#10094;</button>
+
+                                        <div class="menu-row-scroll" id="menuRow">
+                                            <div class="menu-item fade-in">
+                                                <img src="images/graduasiShirt.png" alt="Chocolate Cake">
+                                                <p>Chocolate Cake</p>
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/totebag.png" alt="Caramel Latte">
+                                                <p>Caramel Latte</p>
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/waterbottle.png" alt="Strawberry Tart">
+                                                <p>Strawberry Tart</p>
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/Screenshot 2025-10-20 214002.png" alt="Chocolate Cake">
+                                                <p>Chocolate Cake</p>
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/Screenshot 2025-10-20 224053.png" alt="Caramel Latte">
+                                                <p>Caramel Latte</p>
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/Screenshot 2025-10-20 220249.png" alt="Strawberry Tart">
+                                                <p>Strawberry Tart</p>
+                                            </div>
+                                                    <div class="menu-item fade-in">
+                                                <img src="images/Screenshot 2025-10-20 213946.png" alt="Caramel Latte">
+                                                <p>Caramel Latte</p>
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="img/food6.png" alt="Strawberry Tart">
+                                                <p>Strawberry Tart</p>
+                                            </div>
+                                        </div>
+
+                                        <button class="slide-arrow right" onclick="scrollMenu(1)">&#10095;</button>
+                                    </div>
+                                </div> -->
+<div class="reveal-container layout-column">
+  <div class="text-box">
+    <h1 class="about-title">Featured Products</h1>
+    <p>
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+      The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English.
+    </p>
+  <!-- </div> -->
+
+  <!-- 🔹 Category Navigation Bar -->
+   <div class="text-box"> 
+  <div class="category-nav">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="apparel">Apparel</button>
+    <button class="filter-btn" data-filter="drinkware">Drinkware</button>
+    <button class="filter-btn" data-filter="accessories">Accessories</button>
+  </div>
+
+  <!-- 🔹 Product Section -->
+     <!-- <div class="text-box"></div> -->
+  <div id="product1" class="section-p1">
+    <div class="pro-container">
+
+      <div class="pro" data-category="apparel">
+        <img src="images/graduasiShirt.png" alt="Custom Shirt">
+        <div class="des">
+          <span>Apparel</span>
+          <h5>Custom T-Shirt</h5>
+          <div class="price-cart">
+            <h4>RM 25.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro" data-category="drinkware">
+        <img src="images/waterbottle.png" alt="Custom Mug">
+        <div class="des">
+          <span>Drinkware</span>
+          <h5>Personalized Mug</h5>
+          <div class="price-cart">
+            <h4>RM 15.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro" data-category="accessories">
+        <img src="images/case.png" alt="Custom Keychain">
+        <div class="des">
+          <span>Accessories</span>
+          <h5>Custom Keychain</h5>
+          <div class="price-cart">
+            <h4>RM 8.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro" data-category="apparel">
+        <img src="images/totebag.png" alt="Custom Hoodie">
+        <div class="des">
+          <span>Apparel</span>
+          <h5>Custom Hoodie</h5>
+          <div class="price-cart">
+            <h4>RM 35.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="pro" data-category="drinkware">
+        <img src="images/bottle.png" alt="Custom Bottle">
+        <div class="des">
+          <span>Drinkware</span>
+          <h5>Custom Water Bottle</h5>
+          <div class="price-cart">
+            <h4>RM 18.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro" data-category="accessories">
+        <img src="images/case.png" alt="Phone Case">
+        <div class="des">
+          <span>Accessories</span>
+          <h5>Custom Phone Case</h5>
+          <div class="price-cart">
+            <h4>RM 10.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+  <!-- 🔹 Show More Button -->
+<div class="show-more-container">
+  <button id="showMoreBtn" class="show-more-btn">Show More</button>
+</div>
+
+  </div>
+</div>
+</div>
+        </section>
+                        </section>
+                                <div class="reveal-container layout-column">
+                                    <div class="text-box">
+                                        <h1 class="about-title">limited Edition</h1>
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p> 
+                                    </div>
+                                    <div class="menu-slider-container">
+                                        <button class="slide-arrow left" onclick="scrollMenu(-1)">&#10094;</button>
+
+                                        <div class="menu-row-scroll" id="menuRow">
+                                            <div class="menu-item fade-in">
+                                                <img src="images/graduasiShirt.png" alt="Chocolate Cake">
+                                                <!-- <p>Chocolate Cake</p> -->
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/totebag.png" alt="Caramel Latte">
+                                                <!-- <p>Caramel Latte</p> -->
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/waterbottle.png" alt="Strawberry Tart">
+                                                <!-- <p>Strawberry Tart</p> -->
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/Screenshot 2025-10-20 214002.png" alt="Chocolate Cake">
+                                                <!-- <p>Chocolate Cake</p> -->
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/Screenshot 2025-10-20 224053.png" alt="Caramel Latte">
+                                                <!-- <p>Caramel Latte</p> -->
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="images/Screenshot 2025-10-20 220249.png" alt="Strawberry Tart">
+                                                <!-- <p>Strawberry Tart</p> -->
+                                            </div>
+                                                    <div class="menu-item fade-in">
+                                                <img src="images/Screenshot 2025-10-20 213946.png" alt="Caramel Latte">
+                                                <!-- <p>Caramel Latte</p> -->
+                                            </div>
+                                            <div class="menu-item fade-in">
+                                                <img src="img/food6.png" alt="Strawberry Tart">
+                                                <!-- <p>Strawberry Tart</p> -->
+                                            </div>
+                                        </div>
+
+                                        <button class="slide-arrow right" onclick="scrollMenu(1)">&#10095;</button>
+                                    </div>
+                                </div>
+<div class="reveal-container layout-row">
+<div class="reveal-container layout-row">
+
+  <!-- LEFT: OUR DEAL -->
+  <div class="reveal-text left-section">
+    <div class="text-box">
+      <h1 class="about-title">Our Deal is Your Deals!</h1>
+      <p>Check out our latest promotions and offers just for you!</p>
+      <div class="promotion-gallery">
+        <div class="promo-item fade-in">
+          <img src="images/promoImage1.png" alt="Promotion 1">
+        </div>
+        <div class="promo-item fade-in">
+          <img src="images/promoImage2.png" alt="Promotion 2">
+        </div>
+        <div class="promo-item fade-in">
+          <img src="images/promoImage3.png" alt="Promotion 3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: NEW ITEMS + REVIEW (stacked vertically) -->
+  <div class="right-column">
+    <!-- New Items -->
+    <div class="reveal-text">
+      <div class="text-box">
+        <h1 class="about-title">New Items That Are Upcoming — Stay Tuned!</h1>
+        <p>Discover our newest additions before anyone else!</p>
+        <div class="promotion-gallery grid-3">
+          <div class="promo-item fade-in">
+            <img src="images/newArrive1.png" alt="New Item 1">
+          </div>
+          <div class="promo-item fade-in">
+            <img src="images/newArrive2.png" alt="New Item 2">
+          </div>
+          <div class="promo-item fade-in">
+            <img src="images/newArrive3.png" alt="New Item 3">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review Section (below New Items) -->
+    <div class="reveal-text">
+      <div class="text-box">
+        <h1 class="about-title">Customer Reviews</h1>
+        <p>What our customers are saying about us!</p>
+
+    <div class="review-slider-container2">
+      <div class="review-card-scroll">
+        <div class="review-card">
+          <p>⭐ “Amazing deals and great products!”</p>
+          <div class="review-footer">
+            <img src="images/UiTM1.jpg" alt="User" class="review-icon">
+            <span class="review-name">Sarah J.</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>⭐ “Fast shipping and top-notch service!”</p>
+          <div class="review-footer">
+            <img src="images/UiTM1.jpg" alt="User" class="review-icon">
+            <span class="review-name">James L.</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>⭐ “I love the new arrivals every month!”</p>
+          <div class="review-footer">
+            <img src="images/UiTM1.jpg" alt="User" class="review-icon">
+            <span class="review-name">Alicia R.</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>⭐ “Excellent customer support.”</p>
+          <div class="review-footer">
+            <img src="images/UiTM1.jpg" alt="User" class="review-icon">
+            <span class="review-name">Daniel K.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <h3>About Us</h3>
+                        <p>We are a passionate food and beverage provider!</p>
+                    </div>
+                    <div class="footer-content">
+                        <h3>Quick Links</h3>
+                        <ul class="list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="shop.html">Menu</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content">
+                        <h3>Follow Us</h3>
+                         <ul class="social-icons">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    </ul>
+                    </div>
+                </div>
+
+                <div class="bottom-bar">
+                    <p>© 2025 E-Commerce. All rights reserved.</p>
+                </div>
+            </footer>
+
+            <script>
+                function revealOnScroll() {
+                    const section = document.querySelector('.reveal-section');
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (sectionTop < windowHeight - 100) {
+                    section.classList.add('visible');
+                    }
+                }
+
+                window.addEventListener('scroll', revealOnScroll);
+                window.addEventListener('load', revealOnScroll);
+                
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    const slides = document.getElementsByClassName("mySlide");
+                    const dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove("active");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].classList.add("active");
+                }
+
+                // Auto slideshow
+                setInterval(() => {
+                    plusSlides(1);
+                }, 4000); // 4 seconds
+            </script>
+
+            <script>
+                function revealOnScroll() {
+                    const reveals = document.querySelectorAll('.fade-in');
+                    const windowHeight = window.innerHeight;
+
+                    reveals.forEach(el => {
+                        const top = el.getBoundingClientRect().top;
+                        if (top < windowHeight - 100) {
+                            el.classList.add('visible');
+                        }
+                    });
+                }
+
+                window.addEventListener('scroll', revealOnScroll);
+                window.addEventListener('load', revealOnScroll);
+                </script>
+
+                <script>
+                function scrollMenu(direction) {
+                    const container = document.getElementById('menuRow');
+                    const scrollAmount = 300;
+                    container.scrollBy({
+                        left: direction * scrollAmount,
+                        behavior: 'smooth'
+                    });
+                }
+                </script>
+                <script>
+                function scrollReview(direction) {
+                    const container = document.getElementById('reviewScroll');
+                    const scrollAmount = 120; // adjust to match card height
+                    container.scrollBy({
+                        top: direction * scrollAmount,
+                        behavior: 'smooth'
+                    });
+                }
+                </script>
+                <script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const products = document.querySelectorAll('.pro');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active state
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const category = btn.dataset.filter;
+
+      products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+<script>
+  const showMoreBtn = document.getElementById('showMoreBtn');
+  showMoreBtn.addEventListener('click', () => {
+    window.location.href = 'shop.html';
+  });
+</script>
+
+
+        </body>
+    </html>

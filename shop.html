@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Page</title>
+
+  <!-- Link to CSS -->
+  <link href="css/shopstyle.css" rel="stylesheet" type="text/css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- ======= NAVBAR ======= -->
+  <div class="topnav">
+    <div class="nav-left">
+      <img src="img/LogoP1.png" alt="Logo" class="logo" />
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+      <a href="profile.html" class="icon-link"><i class="fas fa-user"></i></a>
+      <a href="login.html"><button class="nav-btn">Log In</button></a>
+      <a href="signup.html"><button class="nav-btn signup">Sign Up</button></a>
+    </div>
+  </div>
+
+  <!-- ======= SHOP BANNER ======= -->
+  <section class="about-banner">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <h1>Our Shop</h1>
+      <p>Discover our story, mission, and custom products!</p>
+    </div>
+  </section>
+
+  <!-- ======= FEATURED PRODUCTS ======= -->
+  <section id="product1">
+    <div class="text-box">
+      <h1 class="about-title">Featured Products</h1>
+      <p>
+        Browse our exclusive range of customizable items, from apparel to drinkware and more!
+      </p>
+    </div>
+
+    <div class="category-nav">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="apparel">Apparel</button>
+      <button class="filter-btn" data-filter="drinkware">Drinkware</button>
+      <button class="filter-btn" data-filter="accessories">Accessories</button>
+    </div>
+
+    <div class="pro-container">
+      <div class="pro" data-category="apparel">
+        <img src="images/graduasiShirt.png" alt="Custom Shirt">
+        <div class="des">
+          <span>Apparel</span>
+          <h5>Custom T-Shirt</h5>
+          <div class="price-cart">
+            <h4>RM 25.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro" data-category="drinkware">
+        <img src="images/waterbottle.png" alt="Custom Mug">
+        <div class="des">
+          <span>Drinkware</span>
+          <h5>Personalized Mug</h5>
+          <div class="price-cart">
+            <h4>RM 15.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro" data-category="accessories">
+        <img src="images/case.png" alt="Custom Keychain">
+        <div class="des">
+          <span>Accessories</span>
+          <h5>Custom Keychain</h5>
+          <div class="price-cart">
+            <h4>RM 8.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro" data-category="apparel">
+        <img src="images/totebag.png" alt="Custom Hoodie">
+        <div class="des">
+          <span>Apparel</span>
+          <h5>Custom Hoodie</h5>
+          <div class="price-cart">
+            <h4>RM 35.00</h4>
+            <a href="cart.html" class="shop-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="show-more-container">
+      <button id="showMoreBtn" class="show-more-btn">Show More</button>
+    </div> -->
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <h3>About Us</h3>
+        <p>We are a passionate food and beverage provider!</p>
+      </div>
+      <div class="footer-content">
+        <h3>Quick Links</h3>
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <p>© 2025 E-Commerce. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+const buttons = document.querySelectorAll('.filter-btn');
+const products = document.querySelectorAll('.pro');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const category = btn.dataset.filter;
+
+    products.forEach(product => {
+      if (category === 'all' || product.dataset.category === category) {
+        product.style.display = 'block'; // or ''
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
