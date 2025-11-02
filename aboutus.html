@@ -22,30 +22,80 @@
         </div>
     </div>
 
-    <!-- ===== ABOUT US BANNER ===== -->
-    <section class="about-banner">
-        <div class="banner-overlay"></div>
-        <div class="banner-content">
-            <h1>About Us</h1>
-            <p>Learn more about our story, mission, and passion for great food.</p>
-        </div>
-    </section>
+    
+  <!-- ======= SHOP BANNER ======= -->
+  <section class="about-banner">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <h1>Our Shop</h1>
+      <p>Discover our story, mission, and custom products!</p>
+    </div>
+  </section>
 
-    <!-- ===== REVEAL SECTION ===== -->
-    <section class="reveal-section">
-        <div class="reveal-container layout-row">
-            <div class="reveal-text">
-                <div class="text-box">
-                    <h1 class="about-title">About Us</h1>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                </div>
+<section class="reveal-section">
+    <div class="reveal-container layout-row">
+        <div class="reveal-text slideshow-text" id="aboutUsText">
+            <div class="text-slide active">
+                <h1 class="about-title">About Us - Image 1</h1>
+                <p>Lorem Ipsum is the first image description.</p>
             </div>
-            <div class="reveal-image" style="background-image: url('images/Uitm2.jpg');"></div>
+            <div class="text-slide">
+                <h1 class="about-title">About Us - Image 2</h1>
+                <p>Description for the second image goes here.</p>
+            </div>
+            <div class="text-slide">
+                <h1 class="about-title">About Us - Image 3</h1>
+                <p>Third image description is shown here.</p>
+            </div>
         </div>
-    </section>
+
+        <div class="reveal-image slideshow" id="aboutUsSlideshow">
+            <div class="slide active" style="background-image: url('images/UiTM1.jpg');"></div>
+            <div class="slide" style="background-image: url('images/Uitm2.jpg');"></div>
+            <!-- <div class="slide" style="background-image: url('images/Uitm4.jpg');"></div> -->
+        </div>
+    </div>
+</section>
+
+
+<!-- ===== MISSION & VISION SECTION ===== -->
+<section class="reveal-section">
+    <div class="reveal-container layout-row">
+        <div class="reveal-text">
+            <div class="text-box">
+                <h1 class="about-title">Mission & Vision</h1>
+                <p>
+                    Our mission is to provide high-quality, delicious food with excellent service. 
+                    Our vision is to become the leading provider of innovative and sustainable culinary experiences.
+                </p>
+            </div>
+        </div>
+        <div class="reveal-image slideshow" id="missionSlideshow">
+            <div class="slide" style="background-image: url('images/mission.jpg');"></div>
+            <div class="slide" style="background-image: url('images/mission2.jpg');"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== OBJECTIVE & GOAL SECTION ===== -->
+<section class="reveal-section">
+    <div class="reveal-container layout-row">
+        <div class="reveal-text">
+            <div class="text-box">
+                <h1 class="about-title">Objective & Goal</h1>
+                <p>
+                    Our objectives include promoting healthy eating habits and supporting local farmers. 
+                    Our goal is to expand our reach while maintaining sustainability and quality in all our offerings.
+                </p>
+            </div>
+        </div>
+        <div class="reveal-image slideshow" id="objectiveSlideshow">
+            <div class="slide" style="background-image: url('images/objective.jpg');"></div>
+            <div class="slide" style="background-image: url('images/objective2.jpg');"></div>
+        </div>
+    </div>
+</section>
+
 
     <!-- ===== FOOTER ===== -->
     <footer>
@@ -112,6 +162,57 @@
 
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
+
+        // Function to create slideshow
+function initSlideshow(slideshowId, interval = 3000) {
+    const slideshow = document.getElementById(slideshowId);
+    const slides = slideshow.querySelectorAll('.slide');
+    let current = 0;
+
+    slides[current].classList.add('active');
+
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, interval);
+}
+
+// Initialize slideshows
+window.addEventListener('load', () => {
+    initSlideshow('aboutUsSlideshow', 4000);
+    initSlideshow('missionSlideshow', 4000);
+    initSlideshow('objectiveSlideshow', 4000);
+});
+function initSlideshowWithText(slideshowId, textId, interval = 4000) {
+    const slideshow = document.getElementById(slideshowId);
+    const slides = slideshow.querySelectorAll('.slide');
+
+    const textContainer = document.getElementById(textId);
+    const texts = textContainer.querySelectorAll('.text-slide');
+
+    let current = 0;
+    slides[current].classList.add('active');
+    texts[current].classList.add('active');
+
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        texts[current].classList.remove('active');
+
+        current = (current + 1) % slides.length;
+
+        slides[current].classList.add('active');
+        texts[current].classList.add('active');
+    }, interval);
+}
+
+// Initialize slideshows
+window.addEventListener('load', () => {
+    initSlideshowWithText('aboutUsSlideshow', 'aboutUsText', 4000);
+    initSlideshowWithText('missionSlideshow', 'missionText', 4000);
+    initSlideshowWithText('objectiveSlideshow', 'objectiveText', 4000);
+});
+
     </script>
 </body>
 </html>
