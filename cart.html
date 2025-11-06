@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Us Page</title>
-    <link href="css/contactstyle.css" rel="stylesheet" type="text/css" />
+    <title>Your Cart</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -14,45 +14,105 @@
             <a href="index.html">Home</a> 
             <a href="aboutus.html">About Us</a>
             <a href="shop.html">Shop</a>
-            <a href="contact.html" class="active">Contact Us</a>
+            <a href="contact.html">Contact Us</a>
         </div>
         <div class="nav-right">
-            <!-- Cart Icon -->
-            <a href="cart.html" class="icon-link">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-
-            <!-- User Icon -->
-            <a href="profile.html" class="icon-link">
-                <i class="fas fa-user"></i>
-            </a>
+        <a class="active" href="cart2.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+        <a href="profile.html" class="icon-link"><i class="fas fa-user"></i></a>
+        <a href="login.html"><button class="nav-btn">Log In</button></a>
+        <a href="signup.html"><button class="nav-btn signup">Sign Up</button></a>
         </div>
     </div>
 
-    <!-- ===== ABOUT  BANNER ===== -->
-    <!-- <section class="about-banner">
-        <div class="banner-overlay"></div>
-        <div class="banner-content">
-            <h1>Your Cart</h1>
-            <p>Learn more about our story, mission, and passion for great food.</p>
-        </div>
-    </section> -->
+    <section id="cart" class="section-p1"> 
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price (RM)</td>
+                    <td>Quantity</td>
+                    <td>Subtotal (RM)</td>
+                    <td>Remove</td>
 
-    <!-- ===== REVEAL SECTION ===== -->
-    <!-- <section class="reveal-section">
-        <div class="reveal-container layout-row">
-            <div class="reveal-text">
-                <div class="text-box">
-                    <h1 class="about-title">Contact Us</h1>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                </div>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><img src="images/baju1.png" alt=""></td>
+                    <td>UiTM Shirt Cream Edition</td>
+                    <td>35.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>35.00</td>
+                    <td><i class="far fa-times-circle"></i><a href='#'></a></td>
+                </tr>
+
+                 <tr>
+                    <td><img src="images/case.png" alt=""></td>
+                    <td>UiTM Phone Case</td>
+                    <td>8.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>16.00</td>
+                    <td><i class="far fa-times-circle"></i><a href='#'></a></td>
+                </tr>
+
+                 <tr>
+                    <td><img src="images/baju2.png" alt=""></td>
+                    <td>UiTM Shirt Basic</td>
+                    <td>25.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>25.00</td>
+                    <td><i class="far fa-times-circle"></i><a href='#'></a></td>
+                </tr>
+
+                 <tr>
+                    <td><img src="images/graduasiShirt.png" alt=""></td>
+                    <td>UiTM Shirt Limited Edition</td>
+                    <td>38.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>38.00</td>
+                    <td><i class="far fa-times-circle"></i><a href='#'></a></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter your coupon code">
+                <button class="normal">Apply</button>
             </div>
-            <div class="reveal-image" style="background-image: url('images/Uitm2.jpg');"></div>
+        </div> 
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>RM114.00</td>
+                </tr>
+
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Total Amount</strong></td>
+                    <td><strong>RM114.00</strong></td>
+                </tr>
+
+            </table>
+
+            <button class="normal">Make Payment</button>
+
         </div>
-    </section> -->
+
+    </section>
 
     <!-- ===== FOOTER ===== -->
     <footer>
@@ -122,3 +182,4 @@
     </script>
 </body>
 </html>
+
