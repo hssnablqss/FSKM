@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="input-box">
+                        <span>Full Name :</span>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Email :</span>
+                        <input type="email" placeholder="example@example.com">                    
+                    </div>
+
+                    <div class="input-box">
+                        <span>Address :</span>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-box">
+                        <span>City :</span>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-box">
+                        <span>State :</span>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Zip Code :</span>
+                        <input type="text">
+                    </div>
+
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Payment Details</h3>
+                    <div class="input-box">
+                        <span>Cards Accepted :</span><br>
+                        <img src="images/payment.png" alt="">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Name on Card :</span>
+                        <input type="email">                    
+                    </div>
+
+                    <div class="input-box">
+                        <span>Credit Card Number :</span>
+                        <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Exp Date :</span>
+                        <input type="text" placeholder="MM/YY">
+                    </div>
+
+                    <div class="input-box">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="123">
+                    </div>
+
+                </div>
+            </div>
+            
+            <button type="submit" class="btn">Submit</button>
+
+        </form>
+    </div>
+
+<!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>About Us</h3>
+                <p>We are a passionate food and beverage provider!</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shop.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <p>© 2025 E-Commerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL REVEAL SCRIPT ===== -->
+    <script>
+        // Scroll Reveal with staggered effect
+        function revealOnScroll() {
+            const sections = document.querySelectorAll('.reveal-section');
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (sectionTop < windowHeight - 100) {
+                    // Add visible class to section
+                    section.classList.add('visible');
+
+                    // Stagger text and image
+                    const text = section.querySelector('.reveal-text');
+                    const image = section.querySelector('.reveal-image');
+
+                    if (text) {
+                        setTimeout(() => {
+                            text.classList.add('visible');
+                        }, 200); // delay 0.2s
+                    }
+                    if (image) {
+                        setTimeout(() => {
+                            image.classList.add('visible');
+                        }, 500); // delay 0.5s
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+</body>
+</html>

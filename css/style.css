@@ -202,6 +202,78 @@
 
 }
 
+/* Payment Page */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e2e9e1;
+}
+
+.container form{
+    width: 800px;
+    padding: 70px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+form .row {
+    display: flex;
+    gap: 70px;
+}
+
+.row .column {
+    flex: 1 1 250px;
+}
+
+.column .title {
+    font-size: 20px;
+    color:#333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.column .input-box {
+    margin: 15px 0;
+}
+
+.input-box span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.input-box img{
+    height: 60px;  
+    width: auto;
+    margin: 5px 5px;
+    vertical-align: middle;
+}
+
+form .btn {
+    width: 103%;
+    padding: 12px;
+    background: #088178;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+form .btn:hover {
+    background: #066a63a2;
+}
 
 /* Hover underline animation (same style as left) */
 .icon-link::after {
