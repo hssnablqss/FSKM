@@ -2,59 +2,86 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Us Page</title>
-    <link href="css/contactstyle.css" rel="stylesheet" type="text/css" />
+    <title>Payment</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- ===== TOP NAV ===== -->
-    <div class="topnav">
-        <div class="nav-left">
-            <img src="./img/LogoP1.png" alt="Logo" class="logo" />
-            <a href="index.html">Home</a> 
-            <a href="aboutus.html">About Us</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html" class="active">Contact Us</a>
-        </div>
-        <div class="nav-right">
-            <!-- Cart Icon -->
-            <a href="cart.html" class="icon-link">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
 
-            <!-- User Icon -->
-            <a href="profile.html" class="icon-link">
-                <i class="fas fa-user"></i>
-            </a>
-        </div>
-    </div>
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="input-box">
+                        <span>Full Name :</span>
+                        <input type="text">
+                    </div>
 
-    <!-- ===== ABOUT  BANNER ===== -->
-    <!-- <section class="about-banner">
-        <div class="banner-overlay"></div>
-        <div class="banner-content">
-            <h1>Your Cart</h1>
-            <p>Learn more about our story, mission, and passion for great food.</p>
-        </div>
-    </section> -->
+                    <div class="input-box">
+                        <span>Email :</span>
+                        <input type="email" placeholder="example@example.com">                    
+                    </div>
 
-    <!-- ===== REVEAL SECTION ===== -->
-    <!-- <section class="reveal-section">
-        <div class="reveal-container layout-row">
-            <div class="reveal-text">
-                <div class="text-box">
-                    <h1 class="about-title">Contact Us</h1>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
+                    <div class="input-box">
+                        <span>Address :</span>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-box">
+                        <span>City :</span>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-box">
+                        <span>State :</span>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Zip Code :</span>
+                        <input type="text">
+                    </div>
+
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Payment Details</h3>
+                    <div class="input-box">
+                        <span>Cards Accepted :</span><br>
+                        <img src="images/payment.png" alt="">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Name on Card :</span>
+                        <input type="email">                    
+                    </div>
+
+                    <div class="input-box">
+                        <span>Credit Card Number :</span>
+                        <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Exp Date :</span>
+                        <input type="text" placeholder="MM/YY">
+                    </div>
+
+                    <div class="input-box">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="123">
+                    </div>
+
                 </div>
             </div>
-            <div class="reveal-image" style="background-image: url('images/Uitm2.jpg');"></div>
-        </div>
-    </section> -->
+            
+            <button type="submit" class="btn">Submit</button>
 
-    <!-- ===== FOOTER ===== -->
+        </form>
+    </div>
+
+<!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-container">
             <div class="footer-content">
