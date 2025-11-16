@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Admin Dashboard</title>
+        <link rel="stylesheet" href="css/Dashboard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="layout">
+            <div class="sidebar">
+                <div class="user-panel">
+                    <img src="images/deku.jpg" class="user-img" alt="User Image">
+                    <div class="user-info">
+                        <div class="user-name">Izuku Midoriya</div>
+                        <div class="user-role">Administrator</div>
+                    </div>
+                </div>
+                <div class="menu-label">MENU</div>
+
+                <div class="menu-item active dropdown-btn">
+                    <span>Dashboard</span>
+                </div>
+
+                <div class="menu-label">CUSTOMER STUFF</div>
+                <div class="submenu">
+                    <a href="#">eCommerce</a>
+                </div>
+                
+                <div class="menu-item dropdown-btn">
+                    <i class="fa-solid fa-cart-flatbed-suitcase"></i>
+                    Orders
+                    <!-- <span class="tag-new">NEW</span> -->
+                    <i class="fa-solid fa-caret-down arrow"></i>
+                </div>
+
+                <div class="submenu">
+                    <a href="#">List Order</a>
+                    <a href="#">Manage Order</a>
+                </div>
+
+                <div class="menu-item dropdown-btn">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    Inventory
+                    <i class="fa-solid fa-caret-down arrow"></i>
+                </div>
+
+                <div class="submenu">
+                    <a href="#">Add Product</a>
+                    <a href="#">Edit Product</a>
+                </div>
+                <div class="menu-label">ADMIN</div>
+                <a class="menu-item">
+                    <i class="fa-solid fa-user"></i>  Profile
+                </a>
+
+                <div class="menu-label">OTHERS</div>
+                <div class="menu-item dropdown-btn">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    Report
+                </div>
+
+                <div class="menu-item dropdown-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Log Out
+                </div>
+            </div>
+            <!-- End Sidebar -->
+            
+                <!-- HEADER goes beside (NOT above) sidebar -->
+                    <div class="topnav">
+                        <!-- LEFT: Logo only -->
+                        <div class="nav-left">
+                            <img src="./images/LogoFSKM.png" alt="Logo" class="logo" />
+                        </div>
+                        <!-- RIGHT: Search + User -->
+                        <div class="nav-right">
+                            <!-- Search Bar -->
+                            <div class="search-container">
+                                <input type="text" placeholder="Search..." class="search-input">
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            </div>
+                            <!-- User Dropdown -->
+                            <div class="user-menu">
+                                <img src="images/deku.jpg" class="nav-user-img">
+                                <div class="user-dropdown">
+                                    <a href="#">Update Profile</a>
+                                    <a href="#">Settings</a>
+                                    <a href="#">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="main-content">
+                    <div class="dashboard">
+                        <!-- Stats Card Section-->
+                            <div class="stats-cards">
+                                <div class="card card-sales">
+                                    <h3>Monthly Sales</h3>
+                                    <p class="value">RM20,000</p>
+                                    <p class="increase">Increased by 60%</p>
+                                </div>
+                                <div class="card card-orders">
+                                    <h3>Visitors Online</h3>
+                                    <p class="value">50,000</p>
+                                    <p class="decrease">Decreased by 10%</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="chart-orders-row">
+                                    <!-- Monthly Sales Chart-->
+                                        <div class="chart-container">
+                                            <h3>Monthly Sales</h3>
+                                            <canvas id="monthlySalesChart"></canvas>
+                                        </div>
+                                    <!-- Recent Orders Table-->
+                                        <div class="recent-orders">
+                                            <div class="recent-header">
+                                                <h3>Recent Orders</h3>
+                                                <!-- Filter Dropdown -->
+                                                <div class="filter-dropdown">
+                                                    <button class="filter-btn">Filter by Status <i class="fa-solid fa-caret-down"></i></button>
+                                                    <div class="filter-options">
+                                                        <button data-status="all">All</button>
+                                                        <button data-status="delivered">Delivered</button>
+                                                        <button data-status="pending">Pending</button>
+                                                        <button data-status="canceled">Canceled</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Image</th> <!-- Added column for image -->
+                                                        <th>Product</th>
+                                                        <th>Category</th>
+                                                        <th>Price</th>
+                                                        <th>Quantity</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><img src="images/deku.jpg" alt="Tshirt" class="product-img"></td>
+                                                        <td>Tshirt-Uitm</td>
+                                                        <td>Apparell</td>
+                                                        <td>RM30.00</td>
+                                                        <td> 4 </td>
+                                                        <td><span class="status delivered">Delivered</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="images/deku.jpg" alt="Tshirt" class="product-img"></td>
+                                                        <td>Tshirt-Uitm</td>
+                                                        <td>Apparell</td>
+                                                        <td>RM30.00</td>
+                                                        <td> 4 </td>
+                                                        <td><span class="status delivered">Delivered</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="images/deku.jpg" alt="Tshirt" class="product-img"></td>
+                                                        <td>Tshirt-Uitm</td>
+                                                        <td>Apparell</td>
+                                                        <td>RM30.00</td>
+                                                        <td> 4 </td>
+                                                        <td><span class="status canceled">Canceled</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="images/deku.jpg" alt="Tshirt" class="product-img"></td>
+                                                        <td>Tshirt-Uitm</td>
+                                                        <td>Apparell</td>
+                                                        <td>RM30.00</td>
+                                                        <td> 4 </td>
+                                                        <td><span class="status pending">Pending</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <script>
+            //Dropdown at Sidebar
+            document.querySelectorAll(".dropdown-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    btn.classList.toggle("active");
+
+                    let submenu = btn.nextElementSibling;
+                    if (submenu.style.display === "flex") {
+                        submenu.style.display = "none";
+                    } else {
+                        submenu.style.display = "flex";
+                    }
+                });
+            });
+
+            //Dropdown User
+            const userMenu = document.querySelector('.user-menu');
+            const dropdown = document.querySelector('.user-dropdown');
+
+            userMenu.addEventListener('click', () => {
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!userMenu.contains(e.target)) {
+                    dropdown.style.display = "none";
+                }
+            });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- Design canvas -->
+        <script>
+        const chartCanvas = document.getElementById('monthlySalesChart');
+
+        // Set a smaller canvas height
+        chartCanvas.height = 120; // small but readable
+
+        const ctx = chartCanvas.getContext('2d');
+
+        const monthlySalesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Monthly Sales',
+                    data: [300, 350, 200, 240, 180, 220, 320, 250, 400, 380, 250, 230],
+                    backgroundColor: 'rgba(66, 165, 245, 0.6)',  // soft blue
+                    borderColor: 'rgba(30, 136, 229, 1)',       // darker blue border
+                    borderWidth: 2,
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,  // important for small height
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: '#666', stepSize: 100 },
+                        grid: { color: '#eaeaea' }
+                    },
+                    x: {
+                        ticks: { color: '#666' },
+                        grid: { display: false }  // hide vertical gridlines to save space
+                    }
+                }
+            }
+        });
+        </script>
+
+
+
+
+
+        <script>
+            //Filter recent order
+            const filterDropdown = document.querySelector('.filter-dropdown');
+            const filterOptions = document.querySelector('.filter-options');
+            const filterButtons = filterOptions.querySelectorAll('button');
+            const tableRows = document.querySelectorAll('.recent-orders tbody tr');
+
+            filterDropdown.addEventListener('click', (e) => {
+                // Open or close the dropdown
+                if (e.target.classList.contains('filter-btn')) {
+                    filterOptions.style.display = (filterOptions.style.display === 'block') ? 'none' : 'block';
+                }
+            });
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const status = button.getAttribute('data-status');
+
+                    tableRows.forEach(row => {
+                        const rowStatus = row.querySelector('.status').classList[1]; // delivered/pending/canceled
+                        if(status === 'all' || rowStatus === status){
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+
+                    // Close the dropdown after selection
+                    filterOptions.style.display = 'none';
+                });
+            });
+        </script>
+    </body>
+</html>
