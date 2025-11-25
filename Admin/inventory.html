@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Product</title>
+        <link rel="stylesheet" href="css/inventory.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="layout">
+            <div class="sidebar">
+                <div class="user-panel">
+                    <img src="images/deku.jpg" class="user-img" alt="User Image">
+                    <div class="user-info">
+                        <div class="user-name">Izuku Midoriya</div>
+                        <div class="user-role">Administrator</div>
+                    </div>
+                </div>
+                <div class="menu-label">MENU</div>
+
+                <div>
+                    <span>Dashboard</span>
+                </div>
+
+                <div class="menu-label">CUSTOMER STUFF</div>
+                <div class="submenu">
+                    <a href="#">eCommerce</a>
+                </div>
+                
+                <div class="menu-item dropdown-btn">
+                    <i class="fa-solid fa-cart-flatbed-suitcase"></i>
+                    Orders
+                    <!-- <span class="tag-new">NEW</span> -->
+                    <i class="fa-solid fa-caret-down arrow"></i>
+                </div>
+
+                <div class="submenu">
+                    <a href="#">List Order</a>
+                    <a href="#">Manage Order</a>
+                </div>
+
+                <div class="menu-item dropdown-btn">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    Inventory
+                    <i class="fa-solid fa-caret-down arrow"></i>
+                </div>
+
+                <div class="submenu">
+                    <a href="#">Add Product</a>
+                    <a href="#">Edit Product</a>
+                </div>
+                <div class="menu-label">ADMIN</div>
+                <a class="menu-item">
+                    <i class="fa-solid fa-user"></i>  Profile
+                </a>
+
+                <div class="menu-label">OTHERS</div>
+                <div class="menu-item dropdown-btn">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    Report
+                </div>
+
+                <div class="menu-item dropdown-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Log Out
+                </div>
+            </div>
+            <!-- End Sidebar -->
+
+            <div class="right-panel">
+                <!-- HEADER goes beside (NOT above) sidebar -->
+                    <div class="topnav">
+                        <!-- LEFT: Logo only -->
+                        <div class="nav-left">
+                            <img src="./images/LogoFSKM.png" alt="Logo" class="logo" />
+                        </div>
+                        <!-- RIGHT: Search + User -->
+                        <div class="nav-right">
+                            <!-- Search Bar -->
+                            <div class="search-container">
+                                <input type="text" placeholder="Search..." class="search-input">
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            </div>
+                            <!-- User Dropdown -->
+                            <div class="user-menu">
+                                <img src="images/deku.jpg" class="nav-user-img">
+                                <div class="user-dropdown">
+                                    <a href="#">Update Profile</a>
+                                    <a href="#">Settings</a>
+                                    <a href="#">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- End HEADER -->
+
+                <script>
+            //Dropdown at Sidebar
+            document.querySelectorAll(".dropdown-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    btn.classList.toggle("active");
+
+                    let submenu = btn.nextElementSibling;
+                    if (submenu.style.display === "flex") {
+                        submenu.style.display = "none";
+                    } else {
+                        submenu.style.display = "flex";
+                    }
+                });
+            });
+
+            //Dropdown User
+            const userMenu = document.querySelector('.user-menu');
+            const dropdown = document.querySelector('.user-dropdown');
+
+            userMenu.addEventListener('click', () => {
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!userMenu.contains(e.target)) {
+                    dropdown.style.display = "none";
+                }
+            });
+        </script>
+
+        <a href="addProduct.html" class="add-product-link">
+            <button class="btn-add">Add New Product</button>
+        </a>
+
+
+        <section id="inventory" class="section-p1"> 
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Quantity</td>
+                    <td>Edit/Delete</td>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><img src="images/baju1.png" alt=""></td>
+                    <td>UiTM Shirt Cream Edition</td>
+                    <td><input type="number" value="10"></td>
+                    <td>
+                        <a href="editProduct.html" class="edit-product-link">
+                            <button class="btn-edit">Edit</button>
+                        </a>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td><img src="images/case.png" alt=""></td>
+                    <td>UiTM Phone Case</td>
+                    <td><input type="number" value="15"></td>
+                    <td>
+                        <a href="editProduct.html" class="edit-product-link">
+                            <button class="btn-edit">Edit</button>
+                        </a>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td><img src="images/baju2.png" alt=""></td>
+                    <td>UiTM Shirt Basic</td>
+                    <td><input type="number" value="20"></td>
+                    <td>
+                        <a href="editProduct.html" class="edit-product-link">
+                            <button class="btn-edit">Edit</button>
+                        </a>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/graduasiShirt.png" alt=""></td>
+                    <td>UiTM Shirt Limited Edition</td>
+                    <td><input type="number" value="5"></td>
+                    <td>
+                        <a href="editProduct.html" class="edit-product-link">
+                            <button class="btn-edit">Edit</button>
+                        </a>
+
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+
+
+
+</body>
+</html>
